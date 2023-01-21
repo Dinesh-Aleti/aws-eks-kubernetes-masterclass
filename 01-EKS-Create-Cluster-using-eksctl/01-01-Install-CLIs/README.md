@@ -76,7 +76,9 @@ chmod +x ./kubectl
 
 # Set the Path by copying to user Home Directory
 mkdir -p $HOME/bin && cp ./kubectl $HOME/bin/kubectl && export PATH=$PATH:$HOME/bin
-echo 'export PATH=$PATH:$HOME/bin' >> ~/.bash_profile
+echo 'export PATH=$PATH:$HOME/bin' >> ~/.bash_profile 
+or
+export PATH=$PATH:/usr/local/bin/
 
 # Verify the kubectl version
 kubectl version --short --client
