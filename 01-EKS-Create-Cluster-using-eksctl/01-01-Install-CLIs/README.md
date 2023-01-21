@@ -77,8 +77,7 @@ chmod +x ./kubectl
 # Set the Path by copying to user Home Directory
 mkdir -p $HOME/bin && cp ./kubectl $HOME/bin/kubectl && export PATH=$PATH:$HOME/bin
 echo 'export PATH=$PATH:$HOME/bin' >> ~/.bash_profile 
-or
-export PATH=$PATH:/usr/local/bin/
+
 
 # Verify the kubectl version
 kubectl version --short --client
@@ -122,6 +121,11 @@ eksctl version
 ### Step-03-02: eksctl on windows or linux
 - For windows and linux OS, you can refer below documentation link. 
 - **Reference:** https://docs.aws.amazon.com/eks/latest/userguide/eksctl.html#installing-eksctl
+
+### Install eksctl on linux
+- curl --silent --location "https://github.com/weaveworks/eksctl/releases/download/0.26.0-rc.1/eksctl_Linux_amd64.tar.gz" | tar xz -C /tmp
+- sudo mv /tmp/eksctl /usr/local/bin
+- export PATH=$PATH:/usr/local/bin/        
 
 
 ## References:
